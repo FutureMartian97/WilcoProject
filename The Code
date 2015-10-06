@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string TicBoard[3][3] = { { "1", "2","3" }, { "4", "5", "6" }, { "7","8", "9" } }; // the array for the board
+string choice;
+
+void displayBoard();//displays board in the console
+void InsertIntoBoard(string move);
+int main(){
+	cout << "Are you ready to be beat in a simple game of Tic Tac Toe?" << endl;
+	cout << "You get to go first, you will be X's." << endl;
+	cout << "Good luck, your going to need it." << endl;
+	displayBoard();
+}
+void displayBoard(){
+	cout << "   |   |" << endl;
+	cout << "_" << TicBoard[0][0] << "_|_" << TicBoard[0][1] << "_|_" << TicBoard[0][2] << "_" << endl;
+	cout << "_" << TicBoard[1][0] << "_|_" << TicBoard[1][1] << "_|_" << TicBoard[1][2] << "_" << endl;
+	cout << " " << TicBoard[2][0] << " | " << TicBoard[2][1] << " | " << TicBoard[2][2] << " " << endl;
+	cout << "   |   |" << endl;
+}
+void InsertIntoBoard(string move){
+	if (move == "1")TicBoard[0][0] = "X";
+	if (move == "2")TicBoard[0][1] = "X";
+	if (move == "3")TicBoard[0][2] = "X";
+	if (move == "4")TicBoard[1][0] = "X";
+	if (move == "5")TicBoard[1][1] = "X";
+	if (move == "6")TicBoard[1][2] = "X";
+	if (move == "7")TicBoard[2][0] = "X";
+	if (move == "8")TicBoard[2][1] = "X";
+	if (move == "9")TicBoard[2][2] = "X";
+}
